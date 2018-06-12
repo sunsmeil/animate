@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>动画测试</title>
+	<style>
+		#main{
+			background: #434e4d;
+		}	
+	</style>
+</head>
+<body>
+	<div id="main"></div>
+	
+	<script src="./lottie.js"></script>
+	<script src="./test.js"></script>
+	<script type="text/javascript">
+		lottie.loadAnimation({
+			container: document.getElementById('main'),
+			renderer: 'svg',
+			loop: true,
+			autoplay: true,
+			animationData: window.data
+		})
+	</script>
+</body>
+</html>
