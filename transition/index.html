@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>过渡动效</title>
+	<style type="text/css">
+		span{
+			height: 4px;
+			position: absolute;
+			bottom:  -10px;
+			background: blue;
+			transition: width 1s;
+			-moz-transition: width 1s; /* Firefox 4 */
+			-webkit-transition: width 1s; /* Safari 和 Chrome */
+			-o-transition: width 1s; /* Opera */
+
+		}
+		.border{
+			right: 50%;
+		}
+		.border1{
+			left: 50%;
+		}
+		div{
+			position: relative;
+			width: 122px;
+		}
+		h2{
+			transition: color 1s;
+			-moz-transition: color 1s; /* Firefox 4 */
+			-webkit-transition: color 1s; /* Safari 和 Chrome */
+			-o-transition: color 1s; /* Opera */
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h2 id="title" style="color:black">这是个title</h2>
+		<span class="border" style="width: 0px"></span>
+		<span class="border1" style="width: 0px"></span>
+	</div>
+	
+	<button type="button" id="btn">按钮</button>
+	<script type="text/javascript">
+		var btn = document.getElementById('btn');
+		var span = document.getElementsByTagName('span');
+		var title = document.getElementById('title');
+		btn.onclick = function() {
+			title.style.color = title.style.color == 'black' ? 'blue':'black';
+			for (var i = 0; i < span.length; i++) {
+				span[i].style.width = span[i].style.width == '0px' ? '61px':'0px';
+			}
+		};
+	</script>
+</body>
+</html>
