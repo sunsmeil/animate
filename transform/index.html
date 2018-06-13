@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>transform变换</title>
+	<style type="text/css">
+		div{
+			width: 70px;
+			height:  80px;
+			background: #f7f6f6;
+			border: 1px solid #ebebeb;
+			text-align: center;
+			line-height: 80px;
+
+			display: inline-block;
+			margin: 0 20px;
+		}
+
+		.box4{
+			-webkit-transform:  translate(10px, 20px); /*chrome safari*/
+			-ms-transform:  translate(10px, 20px);/*ie9*/
+			-o-transform:  translate(10px, 20px);/*opera*/
+			-moz-transform:  translate(10px, 20px);/*firefox*/
+			transform: translate(10px, 20px);
+		}
+
+		.box3{
+			-webkit-transform:  rotate(45deg); /*chrome safari*/
+			-ms-transform:  rotate(45deg);/*ie9*/
+			-o-transform:  rotate(45deg);/*opera*/
+			-moz-transform:  rotate(45deg);/*firefox*/
+			transform: rotate(45deg);
+		}
+
+		.box2{
+			-webkit-transform:  scale(0.5,1); /*chrome safari*/
+			-ms-transform:  scale(0.5,1);/*ie9*/
+			-o-transform:  scale(0.5,1);/*opera*/
+			-moz-transform:  scale(0.5,1);/*firefox*/
+			transform: scale(0.5,1);
+		}
+
+		.box1{
+			-webkit-transform:  skew(30deg); /*chrome safari*/
+			-ms-transform:  skew(30deg);/*ie9*/
+			-o-transform:  skew(30deg);/*opera*/
+			-moz-transform:  skew(30deg);/*firefox*/
+			transform: skew(30deg);
+		}
+
+		.box5{
+			-webkit-transform:  skew(30deg)  scale(0.5,1) rotate(45deg) translate(10px,20px) ; /*chrome safari*/
+			-ms-transform:  skew(30deg)  scale(0.5,1) rotate(45deg) translate(10px,20px) ;/*ie9*/
+			-o-transform:  skew(30deg)  scale(0.5,1) rotate(45deg) translate(10px,20px) ;/*opera*/
+			-moz-transform:  skew(30deg)  scale(0.5,1) rotate(45deg) translate(10px,20px) ;/*firefox*/
+			transform: skew(30deg)  scale(0.5,1) rotate(45deg) translate(10px,20px) ;
+		}
+	</style>
+</head>
+<body>
+	<div class="box0">box0</div>
+	<div class="box1">box1</div>
+	<div class="box2">box2</div>
+	<div class="box3">box3</div>
+	<div class="box4">box4</div>
+	<div class="box5">box5</div>
+</body>
+</html>
