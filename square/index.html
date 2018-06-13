@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>正方体</title>
+	<style type="text/css">
+		.viewport{
+			perspective: 800px;/*景深*/
+			position: absolute;
+			top: 200px;
+			left: 200px;
+		}
+		.cube{
+			transform-style: preserve-3d;
+			
+			width: 200px;
+			height: 200px;
+			position: relative;
+			transform: rotateX(-200deg) rotateY(0deg);
+		}
+		.side{
+			background: #4c4ce1;
+			opacity: 0.6;
+			width: 200px;
+			height: 200px;
+			position: absolute;
+			outline: 2px solid #ccc;
+		}
+		.side:first-child{
+			transform: rotateX(90deg) translateZ(100px);
+		}
+		.side:nth-child(2){
+			transform: translateZ(100px);
+		}
+		.side:nth-child(3){
+			transform: rotateY(90deg) translateZ(100px);
+		}
+		.side:nth-child(4) {
+    		transform: rotateY(180deg) translateZ(100px);
+    	}
+    	.side:nth-child(5) {
+    		transform: rotateY(90deg) translateZ(-100px);
+    	}
+    	.side:nth-child(6) {
+    		transform: rotateX(-90deg) rotate(180deg) translateZ(100px);
+    	}
+    	.viewport:hover .cube{
+    		animation: rotateMove 2s linear infinite;
+    	}
+    	@keyframes rotateMove{
+    		from {transform:rotateX(-200deg)  rotateY(0)}
+    		to {transform:rotateX(-200deg)  rotateY(360deg)}
+    	}
+	</style>
+</head>
+<body>
+	<div class="viewport">
+		<div class="cube">
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+			<div class="side"></div>
+		</div>
+	</div>
+</body>
+</html>
